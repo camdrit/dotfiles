@@ -1,2 +1,44 @@
+# ignore everything
+# this way I need to manually add exceptions
+# for files I want to commit
+# keeps me from accidentally committing shit I shouldn't.
 *
+
 !.gitignore
+!README.md
+
+# zsh shit
+!.zprofile
+!.zshrc
+!.zshvars
+
+# default formatting options for odinfmt
+!odinfmt.json
+
+!.config/
+.config/*
+
+!.config/autostart/
+!.config/autostart/*
+!.config/fastfetch/
+!.config/fastfetch/config.jsonc
+!.config/ghostty/
+!.config/ghostty/config
+
+# config to make mpv use pulse audio
+# to fix discord's shitty screensharing impl
+!.config/mpv/
+!.config/mpv/mpv.conf
+
+# library folders mapping
+!.config/user-dirs.dirs
+
+!.config/syncplay.ini
+!.config/nvim/
+!.config/nvim/*
+
+# various loose files needed for initial setup, see README.md
+!AMDGopDriver.rom
+!vbios_164e.dat
+!samsung_bg65_edid.bin
+!win11.xml
