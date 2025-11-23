@@ -35,7 +35,7 @@
 
 !.config/syncplay.ini
 !.config/nvim/
-!.config/nvim/*
+!.config/nvim/**
 
 # various loose files needed for initial setup, see README.md
 !AMDGopDriver.rom

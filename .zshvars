@@ -29,6 +29,6 @@ alias cda="cd /mnt/apps"
 alias cdd="cd /mnt/data"
 alias cdc="cd /mnt/data/code"
 alias cdg="cd /mnt/data/git-repos"
-alias nvim="/mnt/apps/nvim.appimage"
+#alias nvim="/mnt/apps/nvim.appimage"
 alias dcli="/mnt/apps/dcli"
 
