@@ -45,16 +45,16 @@ amd_iommu=on iommu=pt pci-stub.ids=1002:164e,1002:1640 rd.driver.pre=vfio-pci
 
 Make sure to update the stub IDs if you decide to add a second dGPU later...
 
-Also, add this to `/etc/dracut.conf.d/local.conf`:
+Also, add this to `/etc/mkinitcpio.conf`:
 
 ```
-force_drivers+=" vfio vfio_iommu_type1 vfio_pci pci-stub "
+MODULES=(crc32c vfio vfio_iommu_type1 vfio_pci pci-stub)
 ```
 
 Finally, run:
 
 ```
-sudo dracut -f --kver `uname -r`
+sudo mkinitcpio -P
 ```
 
 And also update grub!!!!
@@ -90,11 +90,7 @@ Then edit your grub cmdline:
 drm.edid_firmware=DP-1:edid/samsung_bg65_edid.bin
 ```
 
-update grub, then:
-
-```
-sudo dracut --force --install /lib/firmware/edid/samsung_bg65_edid.bin /boot/initramfs-$(uname -r).img $(uname -r)
-```
+update grub, then regenerate your initramfs.
 
 ### KVM stuff
 
