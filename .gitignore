@@ -18,8 +18,6 @@
 !.config/
 .config/*
 
-!.config/autostart/
-!.config/autostart/*
 !.config/fastfetch/
 !.config/fastfetch/config.jsonc
 !.config/ghostty/
@@ -42,3 +40,4 @@
 !vbios_164e.dat
 !samsung_bg65_edid.bin
 !win11.xml
+!update-odin.sh
