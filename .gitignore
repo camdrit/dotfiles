@@ -7,11 +7,6 @@
 !.gitignore
 !README.md
 
-# zsh shit
-!.zprofile
-!.zshrc
-!.zshvars
-
 # default formatting options for odinfmt
 !odinfmt.json
 
@@ -20,8 +15,16 @@
 
 !.config/fastfetch/
 !.config/fastfetch/config.jsonc
-!.config/ghostty/
-!.config/ghostty/config
+
+!.config/fish/
+!.config/fish/**
+
+!.config/kitty/
+!.config/kitty/**
+.config/kitty/kitty.conf.bak
+
+# oh-my-posh
+!dracula.omp.json
 
 # config to make mpv use pulse audio
 # to fix discord's shitty screensharing impl
