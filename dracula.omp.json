@@ -46,22 +46,6 @@
           "cache": {
             "duration": "none"
           },
-          "options": {
-            "branch_icon": "",
-            "fetch_status": false,
-            "fetch_upstream_icon": true
-          },
-          "template": " \ue725 ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) ",
-          "foreground": "#f8f8f2",
-          "powerline_symbol": "\ue0b0",
-          "background": "#ffb86c",
-          "type": "git",
-          "style": "powerline"
-        },
-        {
-          "cache": {
-            "duration": "none"
-          },
           "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "foreground": "#f8f8f2",
           "powerline_symbol": "\ue0b0",
@@ -89,19 +73,21 @@
       "type": "rprompt",
       "alignment": "left",
       "segments": [
-        {
-          "cache": {
-            "duration": "none"
-          },
-          "leading_diamond": "\ue0b2",
-          "trailing_diamond": "\ue0b4",
-          "template": " \ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
-          "foreground": "#282a36",
-          "background": "#f1fa8c",
-          "type": "aws",
-          "style": "diamond",
-          "invert_powerline": true
-        }
+      	{
+      	  "cache": {
+      	    "duration": "none"
+      	  },
+      	  "options": {
+      	    "branch_icon": "",
+      	    "fetch_status": true,
+      	    "fetch_upstream_icon": true
+      	  },
+      	  "template": " \ue725 ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) ",
+      	  "foreground": "#f8f8f2",
+      	  "background": "#ffb86c",
+      	  "type": "git",
+      	  "style": "diamond"
+      	}
       ]
     }
   ],
