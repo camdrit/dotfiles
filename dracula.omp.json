@@ -14,8 +14,8 @@
           "type": "os",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-          "foreground": "#f8f82",
-          "background": "#6272a4",
+          "foreground": "#f8f8f2",
+          "background": "#635d97",
           "template": "{{.Icon}} "
         },
         {
@@ -24,7 +24,7 @@
           },
           "template": "{{ .UserName }} ",
           "foreground": "#f8f8f2",
-          "background": "#6272a4",
+          "background": "#635d97",
           "type": "session",
           "style": "diamond"
         },
@@ -38,7 +38,7 @@
           "template": " {{ .Path }} ",
           "foreground": "#f8f8f2",
           "powerline_symbol": "\ue0b0",
-          "background": "#bd93f9",
+          "background": "#9580ff",
           "type": "path",
           "style": "powerline"
         },
@@ -63,7 +63,7 @@
           "trailing_diamond": "\ue0b0",
           "template": " ♥ {{ .CurrentDate | date .Format }} ",
           "foreground": "#f8f8f2",
-          "background": "#ff79c6",
+          "background": "#ff80bf",
           "type": "time",
           "style": "diamond"
         }
@@ -82,17 +82,20 @@
       	    "fetch_status": true,
       	    "fetch_upstream_icon": true
       	  },
-      	  "template": " \ue725 ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) ",
-      	  "foreground": "#f8f8f2",
-      	  "background": "#ffb86c",
+      	  "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
+      	  "foreground": "#1F1F1F",
+      	  "background": "#80FFEA",
       	  "background_templates": [
-      	  	"{{ if or (.Working.Changed) (.Staging.Changed) }}#FFCA80{{ end }}",
-      	  	"{{ if and (gt .Ahead 0) (gt .Behind 0) }}FF80BF{{ end }}",
-      	  	"{{ if gt .Ahead 0 }}#8AFF80{{ end }}",
-      	  	"{{ if gt .Behind 0 }}#80FFEA{{ end }}"
+      	  	"{{ if or (.Working.Changed) (.Staging.Changed) }}#80FFEA{{ end }}",
+      	  	"{{ if and (gt .Ahead 0) (gt .Behind 0) }}#8AFF80{{ end }}",
+      	  	"{{ if gt .Ahead 0 }}#FFCA80{{ end }}",
+      	  	"{{ if gt .Behind 0 }}#FF80BF{{ end }}"
       	  ],
       	  "type": "git",
-      	  "style": "diamond"
+      	  "style": "diamond",
+      	  "trailing_diamond": "\ue0b4",
+      	  "invert_powerline": true,
+      	  "leading_diamond": "\ue0b2"
       	}
       ]
     }
