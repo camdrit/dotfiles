@@ -34,7 +34,6 @@
 # library folders mapping
 !.config/user-dirs.dirs
 
-!.config/syncplay.ini
 !.config/nvim/
 !.config/nvim/**
 
