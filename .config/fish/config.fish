@@ -1,5 +1,11 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 
+function fish_greeting
+    if test "$TERM_PROGRAM" != "vscode"
+        fastfetch
+    end
+end
+
 export SUDO_EDITOR=nvim
 export TOOLCHAIN_ROOT=/mnt/apps/toolchain
 export XCURSOR_THEME=capitaine-cursors
